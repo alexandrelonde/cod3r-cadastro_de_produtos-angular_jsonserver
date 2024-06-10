@@ -1,0 +1,19 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Mouse Logitech",
+      "price": 65.5
+    },
+    {
+      "id": 2,
+      "name": "Teclado Redragon",
+      "price": 280
+    },
+    {
+      "id": 3,
+      "name": "Caixa de Som Tedge",
+      "price": 158.90
+    }
+  ]
+}
