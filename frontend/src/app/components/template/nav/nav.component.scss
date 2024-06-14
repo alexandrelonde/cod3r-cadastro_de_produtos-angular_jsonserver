@@ -1,0 +1,21 @@
+.sidenav {
+  background-color: #3F51B5;
+  width: 200px;
+}
+
+
+// *** Pedir ajuda para resolver esse problema
+// O link e o ícone não ficam brancos
+.sidenav a {
+  color: #FFF;
+}
+
+.sidenav i {
+  padding-right: 10px;
+}
+// Detalhe -> em: .sidenav i a cor do icone é alterada normalmente
+
+.content {
+  padding: 16px;
+  background-color: #FFF;
+}
