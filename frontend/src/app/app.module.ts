@@ -18,6 +18,7 @@ import { MatButtonModule } from '@angular/material/button';
 
 
 @NgModule({
+  // Components, Directives, Pipes
   declarations: [
     AppComponent,
     HeaderComponent,
