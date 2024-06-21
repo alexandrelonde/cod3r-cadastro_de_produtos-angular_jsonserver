@@ -13,7 +13,12 @@
     {
       "id": 3,
       "name": "Caixa de Som Tedge",
-      "price": 158.90
+      "price": 158.9
+    },
+    {
+      "name": "Teclado Multilaser",
+      "price": 75.5,
+      "id": 4
     }
   ]
 }

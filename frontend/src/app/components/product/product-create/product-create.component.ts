@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../product.service';
 import { Router } from '@angular/router';
+import { Product } from '../product.model';
 
 @Component({
   selector: 'app-product-create',
@@ -9,15 +10,26 @@ import { Router } from '@angular/router';
 })
 export class ProductCreateComponent implements OnInit {
 
+  product: Product = {
+    name: 'Teclado Multilaser',
+    price: 75.50
+  }
+
   constructor(private productService: ProductService, private router: Router) { }
 
   ngOnInit(): void {
 
-
   }
 
   createProduct(): void {
-    this.productService.showMessage('Produto Criado!');
+    // Chamamos o método create() que está na service, se subscrevendo no mesmo
+    this.productService.create(this.product).subscribe((newProduct) => {
+      // Quando chegar a reposta, executamos este outro método da service
+      console.log(newProduct); // Verificando o retorno do backend
+      this.productService.showMessage('Produto Criado!');
+      // e então executamos esse outro método
+      this.router.navigate(['/products']);
+    })
   }
 
   cancel(): void {
