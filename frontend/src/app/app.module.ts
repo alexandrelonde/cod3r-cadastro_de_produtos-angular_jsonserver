@@ -15,8 +15,12 @@ import { ProductCrudComponent } from './views/product-crud/product-crud.componen
 import { RedDirective } from './directives/red.directive';
 import { ProductCreateComponent } from './components/product/product-create/product-create.component';
 import { MatButtonModule } from '@angular/material/button';
-
 import { HttpClientModule } from '@angular/common/http';
+
+import { FormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -39,8 +43,11 @@ import { HttpClientModule } from '@angular/common/http';
     MatListModule,
     MatCardModule,
     MatButtonModule,
-    HttpClientModule
-
+    HttpClientModule,
+    FormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    BrowserAnimationsModule
   ],
   providers: [
     provideAnimationsAsync()

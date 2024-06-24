@@ -11,8 +11,8 @@ import { Product } from '../product.model';
 export class ProductCreateComponent implements OnInit {
 
   product: Product = {
-    name: 'Teclado Multilaser',
-    price: 75.50
+    name: '',
+    price: null
   }
 
   constructor(private productService: ProductService, private router: Router) { }
@@ -22,6 +22,10 @@ export class ProductCreateComponent implements OnInit {
   }
 
   createProduct(): void {
+    // Converter o dado do preenchimento do campo de string para number
+    if (this.product.price !== null) {
+      this.product.price = Number(this.product.price);
+    }
     // Chamamos o método create() que está na service, se subscrevendo no mesmo
     this.productService.create(this.product).subscribe((newProduct) => {
       // Quando chegar a reposta, executamos este outro método da service
