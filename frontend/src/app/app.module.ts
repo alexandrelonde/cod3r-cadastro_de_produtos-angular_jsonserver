@@ -22,6 +22,10 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ProductReadComponent } from './components/product/product-read/product-read.component';
+import { ProductRead2Component } from './components/product/product-read2/product-read2.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
 
 
 @NgModule({
@@ -36,6 +40,7 @@ import { ProductReadComponent } from './components/product/product-read/product-
     RedDirective,
     ProductCreateComponent,
     ProductReadComponent,
+    ProductRead2Component,
   ],
   imports: [
     BrowserModule,
@@ -49,7 +54,10 @@ import { ProductReadComponent } from './components/product/product-read/product-
     FormsModule,
     MatFormFieldModule,
     MatInputModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule
   ],
   providers: [
     provideAnimationsAsync()
