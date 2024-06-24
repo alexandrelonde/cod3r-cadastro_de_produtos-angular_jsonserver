@@ -1,1 +1,28 @@
-<p>product-read works!</p>
+<ul>
+  <li *ngFor="let product of products">
+    {{product.id}}  {{ product.name }}  {{ product.price }}
+  </li>
+</ul>
+
+
+<!--
+  <li *ngFor="let product of products"></li>
+  IMPORTANTÍSSIMO ESSA LINHA DE CÓDIGO
+  Aqui vamos ter uma diretiva estrutural renderizando os itens cadastrados
+  cada linha será armazenada em uma variável criada localmente chamada product
+  onde colocamos a parte de código: "let product"
+  Então pegaremos os dados de products, onde colocamos a parte "of products"
+  "products" é a variável criada no arquivo .ts nessa parte do código:
+
+  export class ProductReadComponent implements OnInit{
+
+    products: Product[] = []; // Inicializar como array vazio
+
+    constructor(private productService: ProductService) { }
+  ...
+
+  Então fazemos uma interpolação para que o conteúdo seja exibido na tela.
+
+  Importante nesse estudo ver como a diretiva estrutural ngFor atua dentro de
+  uma tabela de itens.
+-->

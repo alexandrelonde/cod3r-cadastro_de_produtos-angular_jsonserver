@@ -24,6 +24,11 @@
       "name": "Gabinete Vinik Azul",
       "price": 280.35,
       "id": 5
+    },
+    {
+      "name": "Mousepad Pichau",
+      "price": 120.77,
+      "id": 6
     }
   ]
 }
