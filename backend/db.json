@@ -19,6 +19,11 @@
       "name": "Suporte Para Monitor",
       "price": 187.5,
       "id": 4
+    },
+    {
+      "name": "Gabinete Vinik Azul",
+      "price": 280.35,
+      "id": 5
     }
   ]
 }

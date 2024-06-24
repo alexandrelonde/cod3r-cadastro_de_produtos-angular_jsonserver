@@ -21,8 +21,14 @@ export class ProductService {
     })
   }
 
+  // C - create product
   create(product: Product): Observable<Product> {
     return this.http.post<Product>(this.baseUrl, product)
+  }
+
+  // R - read product
+  read(): Observable<Product[]> {
+    return this.http.get<Product[]>(this.baseUrl)
   }
 
 }
