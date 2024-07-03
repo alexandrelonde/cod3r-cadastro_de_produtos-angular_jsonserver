@@ -29,6 +29,56 @@
       "name": "Mousepad Pichau",
       "price": 120.77,
       "id": 6
+    },
+    {
+      "name": "Monitor Dell 24 Polegadas",
+      "price": 899.99,
+      "id": 7
+    },
+    {
+      "name": "Teclado Mecânico RGB",
+      "price": 350.00,
+      "id": 8
+    },
+    {
+      "name": "Mouse Gamer Logitech G502",
+      "price": 299.50,
+      "id": 9
+    },
+    {
+      "name": "Headset HyperX Cloud II",
+      "price": 549.90,
+      "id": 10
+    },
+    {
+      "name": "SSD Kingston 480GB",
+      "price": 450.00,
+      "id": 11
+    },
+    {
+      "name": "Fonte Corsair 650W",
+      "price": 475.75,
+      "id": 12
+    },
+    {
+      "name": "Placa de Vídeo RTX 3060",
+      "price": 2500.00,
+      "id": 13
+    },
+    {
+      "name": "Cadeira Gamer Cougar Armor",
+      "price": 850.00,
+      "id": 14
+    },
+    {
+      "name": "Webcam Logitech C920",
+      "price": 400.00,
+      "id": 15
+    },
+    {
+      "name": "Microfone Blue Yeti USB",
+      "price": 780.00,
+      "id": 16
     }
   ]
 }
