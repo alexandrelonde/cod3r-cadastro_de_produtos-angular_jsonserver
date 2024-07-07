@@ -37,8 +37,10 @@ export class ProductService {
   }
 
   // U - update product
-
-
+  update(product: Product): Observable<Product> {
+    const url = `${this.baseUrl}/${product.id}`;
+    return this.http.put<Product>(url, product);
+  }
 
 }
 
@@ -46,4 +48,9 @@ export class ProductService {
   O decorator @Injectable significa que essa classe (service)
   pode ser injetada em outras classes.
 
+  Para construir a url do método readById
+  const url = `${this.baseUrl}/${id}`;
+
+  Para construir a url do método update
+  const url = `${this.baseUrl}/${product.id}`;
 */
