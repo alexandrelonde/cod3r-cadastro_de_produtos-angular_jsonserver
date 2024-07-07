@@ -23,13 +23,22 @@ export class ProductService {
 
   // C - create product
   create(product: Product): Observable<Product> {
-    return this.http.post<Product>(this.baseUrl, product)
+    return this.http.post<Product>(this.baseUrl, product);
   }
 
   // R - read product
-  read(): Observable<Product[]> {
-    return this.http.get<Product[]>(this.baseUrl)
+  readAll(): Observable<Product[]> {
+    return this.http.get<Product[]>(this.baseUrl);
   }
+
+  readById(id: string): Observable<Product> {
+    const url = `${this.baseUrl}/${id}`;
+    return this.http.get<Product>(url);
+  }
+
+  // U - update product
+
+
 
 }
 
