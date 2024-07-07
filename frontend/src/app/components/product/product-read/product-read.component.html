@@ -34,7 +34,7 @@
             menu_open
           </i>
         </a>
-        <a routerLink="" class="edit">
+        <a routerLink="/products/update/{{ row.id }}" class="edit">
           <i class="material-icons">
             edit
           </i>
@@ -92,4 +92,20 @@
 
   Importante nesse estudo ver como a diretiva estrutural ngFor atua dentro de
   uma tabela de itens.
+-->
+
+<!--
+  <a routerLink="/products/update/{{ row.id }}" class="edit">
+
+  Estamos criando a url a partir da linha do produto. É um procedimento
+  similar ao utilizado no método update da service.
+
+
+  CUIDADO!!!
+
+    Caminho no app-routing.module.ts
+      path: 'products/update/:id'
+    Caminho no product-read.component.html
+      <a routerLink="/products/update/{{ row.id }}" class="edit">
+    Colocamos uma / antes de products
 -->
