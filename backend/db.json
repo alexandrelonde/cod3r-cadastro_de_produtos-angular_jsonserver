@@ -3,12 +3,12 @@
     {
       "id": 1,
       "name": "Mouse Logitech",
-      "price": 65.5
+      "price": "65.55"
     },
     {
       "id": 2,
       "name": "Teclado Redragon",
-      "price": 280
+      "price": "280.80"
     },
     {
       "id": 3,
@@ -62,7 +62,7 @@
     },
     {
       "name": "Placa de Vídeo RTX 3060",
-      "price": 2500,
+      "price": "3250.85",
       "id": 13
     },
     {
@@ -84,6 +84,11 @@
       "name": "Notebook Dell Inspiron",
       "price": 4500,
       "id": 17
+    },
+    {
+      "name": "Fone de Ouvido Com Fio",
+      "price": 10.55,
+      "id": 18
     }
   ]
 }
