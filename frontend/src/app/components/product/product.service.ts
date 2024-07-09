@@ -42,6 +42,12 @@ export class ProductService {
     return this.http.put<Product>(url, product);
   }
 
+  // D - delete product
+  delete(id: string): Observable<Product> {
+    const url = `${this.baseUrl}/${id}`;
+    return this.http.delete<Product>(url);
+  }
+
 }
 
 /*
@@ -53,4 +59,22 @@ export class ProductService {
 
   Para construir a url do método update
   const url = `${this.baseUrl}/${product.id}`;
+*/
+
+
+/*
+  // R - read product
+  readById(id: string): Observable<Product> {
+    const url = `${this.baseUrl}/${id}`;
+    return this.http.get<Product>(url);
+  }
+
+  // D - delete product
+  delete(id: string): Observable<Product> {
+    const url = `${this.baseUrl}/${id}`;
+    return this.http.delete<Product>(url);
+  }
+
+  Ambos métodos são parecidos. O que difere é o
+  verbo http utilizado na requisição.
 */
