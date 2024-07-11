@@ -22,6 +22,7 @@ export class ProductUpdateComponent implements OnInit {
     private route: ActivatedRoute
   ) {}
 
+  // Sempre que for buscar um produto para atualizar ou deletar
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id');
     if(id) {

@@ -30,7 +30,7 @@ export class ProductCreateComponent implements OnInit {
     this.productService.create(this.product).subscribe((newProduct) => {
       // Quando chegar a reposta, executamos este outro método da service
       console.log(newProduct); // Verificando o retorno do backend
-      this.productService.showMessage('Produto Criado!');
+      this.productService.showMessage('Produto adicionado com sucesso!');
       // e então executamos esse outro método
       this.router.navigate(['/products']);
     })
