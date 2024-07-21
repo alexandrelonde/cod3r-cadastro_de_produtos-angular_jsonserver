@@ -1,5 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 
+@use "@angular/material" as mat;
+
+// Estilo Padrão
 html,
 body {
   height: 100%;
@@ -10,10 +13,47 @@ body {
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
+/*
+
+// Caso queira criar sua própria paleta de cores customizada
+$custom-primary-palette: (
+
+  Colocar as cores da paleta customizada aqui
+);
+
+*/
+
+// Definindo as cores para o tema customizado
+$custom-primary: mat.define-palette(mat.$cyan-palette, 900); /* ($custom-primary-palette) */
+$custom-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+$custom-warn: mat.define-palette(mat.$red-palette);
+
+
+// Aplicando as cores customizadas ao tema customizado (primary, accent, warn)
+$custom-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $custom-primary,
+      accent: $custom-accent,
+      warn: $custom-warn,
+    ),
+  )
+);
+
+// Incluindo o tema customizado em todos os components
+@include mat.all-component-themes($custom-theme);
+
+
+// Estilo determinado no curso
 .red {
   color: #e35e6b;
 }
 
 .v-middle {
   vertical-align: middle;
+}
+
+.msg-success {
+  background-color: #28a745;
+  color: #fff;
 }
