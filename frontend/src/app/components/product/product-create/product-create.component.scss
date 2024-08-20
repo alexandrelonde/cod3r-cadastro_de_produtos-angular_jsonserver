@@ -1,12 +1,17 @@
+.main-card {
+  border: 2px solid #434447; /* Alterar a cor (#3f51b5) e a espessura (2px) conforme necessário */
+  border-radius: 8px; /* Ajuste o raio da borda se desejar */
+  padding: 16px; /* Adicionar padding para dar espaço interno */
+}
+
 form {
   display: flex;
   flex-direction: column;
+  margin-top: 20px;
 }
 
-.main-card {
-  border: 2px solid #3f51b5; /* Alterar a cor (#3f51b5) e a espessura (2px) conforme necessário */
-  border-radius: 8px; /* Ajuste o raio da borda se desejar */
-  padding: 16px; /* Adicionar padding para dar espaço interno */
+form mat-form-field {
+  margin-bottom: 15px;
 }
 
 .button-group {
@@ -17,5 +22,11 @@ form {
 
 button {
   flex: none;
+}
+
+.aviso {
+  margin-top: 30px;
+  text-align: center;
+  font-weight: bold;
 }
 

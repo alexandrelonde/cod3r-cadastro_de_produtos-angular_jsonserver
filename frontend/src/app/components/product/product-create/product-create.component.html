@@ -1,14 +1,36 @@
 <mat-card class="main-card">
   <mat-card-title>Novo Produto</mat-card-title>
   <form>
-    <mat-form-field>
-      <input matInput placeholder="Nome" [(ngModel)]="product.name" name="name">
+    <mat-form-field appearance="outline">
+      <mat-label>Nome</mat-label>
+      <input matInput [(ngModel)]="product.name" name="name" required minlength="3" #name="ngModel" />
+
+      <!-- Erro - nome é obrigatório -->
+      <mat-error *ngIf="name.errors?.['required']">O nome é obrigatório.</mat-error
+      >
+
+      <!-- Erro - quantidade mínima de caracteres -->
+      <mat-error *ngIf="name.errors?.['minlength']">
+        O nome tem que ter pelo menos
+        {{name.errors?.['minlength'].requiredLength}} caracteres, mas ele só
+        possui {{name.errors?.['minlength'].actualLength}} caracter.
+      </mat-error>
     </mat-form-field>
 
-    <mat-form-field>
-      <input matInput placeholder="Preço (R$)" [(ngModel)]="product.price" name="price">
-    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Preço (R$)</mat-label>
+      <input matInput [(ngModel)]="product.price" name="price" required #preco="ngModel"/>
 
+      <!-- Erro - preço é obrigatório -->
+      <mat-error *ngIf="preco.errors?.['required']">
+        O preço é obrigatório.
+      </mat-error>
+
+      <!-- Erro - padrão de caracteres -->
+
+
+
+    </mat-form-field>
   </form>
 
   <div class="button-group">
@@ -16,11 +38,25 @@
       Salvar
     </button>
 
-    <button mat-raised-button (click)="cancel()">
-      Cancelar
-    </button>
+    <button mat-raised-button (click)="cancel()">Cancelar</button>
   </div>
 
+  <span class="aviso">Os campos marcados com * são obrigatórios.</span>
 </mat-card>
 
 
+<!--
+  VALIDAÇÕES:
+    required - campo obrigatório;
+    min length - quantidade mínima de caracteres;
+    max length - quantidade máxima de caracteres;
+    email - email válido;
+    pattern - seguir um padrão de caracteres;
+
+  IMPORTANTE -> essas validações são feitas apenas no lado do cliente.
+  Elas ocorrem apenas a nivel do browser.
+
+  QUANDO AS INFORMAÇÕES SÃO ENVIADAS É MUITO IMPORTANTES VALIDAR AS
+  INFORMAÇÕES TAMBÉM NO BACKEND POR QUESTÕES DE SEGURANÇA. OU SEJA,
+  AS INFORMAÇÕES SÃO VALIDADAS NO FRONTEND E NO BACKEND (DUPLA VALIDAÇÃO).
+-->

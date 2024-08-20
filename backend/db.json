@@ -79,6 +79,11 @@
       "name": "Microfone Blue Yeti USB",
       "price": 780,
       "id": 16
+    },
+    {
+      "name": "Adaptador USB",
+      "price": 67.5,
+      "id": 17
     }
   ]
 }
