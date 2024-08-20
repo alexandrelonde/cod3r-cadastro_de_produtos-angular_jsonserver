@@ -1,6 +1,6 @@
 <mat-card class="main-card">
   <mat-card-title>Novo Produto</mat-card-title>
-  <form>
+  <form #productFrom="ngForm">
     <mat-form-field appearance="outline">
       <mat-label>Nome</mat-label>
       <input matInput [(ngModel)]="product.name" name="name" required minlength="3" #name="ngModel" />
@@ -34,7 +34,7 @@
   </form>
 
   <div class="button-group">
-    <button mat-raised-button (click)="createProduct()" color="primary">
+    <button mat-raised-button (click)="createProduct()" color="primary" [disabled]="!productFrom.valid">
       Salvar
     </button>
 

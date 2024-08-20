@@ -84,6 +84,11 @@
       "name": "Adaptador USB",
       "price": 67.5,
       "id": 17
+    },
+    {
+      "name": "Impressora HP",
+      "price": 328.75,
+      "id": 18
     }
   ]
 }
