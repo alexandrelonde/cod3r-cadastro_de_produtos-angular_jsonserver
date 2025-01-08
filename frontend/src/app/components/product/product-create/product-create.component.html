@@ -3,7 +3,15 @@
   <form #productFrom="ngForm">
     <mat-form-field appearance="outline">
       <mat-label>Nome</mat-label>
-      <input matInput [(ngModel)]="product.name" name="name" required minlength="3" #name="ngModel" />
+      <input matInput
+        [(ngModel)]="product.name"
+        [ngModelOptions]="{updateOn: 'blur'}"
+        (ngModelChange)="onNameChange($event)"
+        name="name"
+        required
+        minlength="3"
+        #name="ngModel"
+      />
 
       <!-- Erro - nome é obrigatório -->
       <mat-error *ngIf="name.errors?.['required']">O nome é obrigatório.</mat-error
@@ -47,11 +55,11 @@
 
 <!--
   VALIDAÇÕES:
-    required - campo obrigatório;
+    required --- campo obrigatório;
     min length - quantidade mínima de caracteres;
     max length - quantidade máxima de caracteres;
-    email - email válido;
-    pattern - seguir um padrão de caracteres;
+    email ------ email válido;
+    pattern ---- seguir um padrão de caracteres;
 
   IMPORTANTE -> essas validações são feitas apenas no lado do cliente.
   Elas ocorrem apenas a nivel do browser.
@@ -59,4 +67,13 @@
   QUANDO AS INFORMAÇÕES SÃO ENVIADAS É MUITO IMPORTANTES VALIDAR AS
   INFORMAÇÕES TAMBÉM NO BACKEND POR QUESTÕES DE SEGURANÇA. OU SEJA,
   AS INFORMAÇÕES SÃO VALIDADAS NO FRONTEND E NO BACKEND (DUPLA VALIDAÇÃO).
+-->
+
+<!--
+  ngModelChange: faz uma verificação a cada mudança
+
+  ngModelOptions: faz a verificação baseada em uma circunstância
+
+  Com esses recursos podemos fazer uma busca no backend e verificar se
+  o produto inserido já foi cadastrado.
 -->
